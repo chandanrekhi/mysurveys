@@ -6,7 +6,7 @@ require 'capistrano/ext/multistage'
 #lock '3.2.1'
 
 set :application, 'Surveys'
-set :repo_url, 'https://github.com/chandanrekhi/mysurveys.git'
+set :repository, 'ssh://git@github.com/chandanrekhi/mysurveys.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -15,6 +15,8 @@ set :repo_url, 'https://github.com/chandanrekhi/mysurveys.git'
  set :deploy_to, '/var/www/mysurveys'
 
 # Default value for :scm is :git
+default_run_options[:pty] = true
+
 set :user, 'ruby'
 set :use_sudo, 'false'
 set :scm, :git
