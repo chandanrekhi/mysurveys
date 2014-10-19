@@ -23,6 +23,9 @@ end
 gem 'thin'
 
 gem 'jquery-rails'
+
+group :development do
+
 gem 'net-ssh'
 
 # To use ActiveModel has_secure_password
@@ -37,5 +40,6 @@ gem 'net-ssh'
 # Deploy with Capistrano
 gem "capistrano", "~> 2.15.0"
 
+end
 # To use debugger
 # gem 'debugger'

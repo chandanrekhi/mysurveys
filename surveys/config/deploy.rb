@@ -8,6 +8,7 @@ require 'capistrano/ext/multistage'
 set :application, 'Surveys'
 set :repository, 'ssh://git@github.com/chandanrekhi/mysurveys.git'
 
+
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
