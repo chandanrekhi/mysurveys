@@ -19,9 +19,9 @@ set :repository, 'ssh://git@github.com/chandanrekhi/mysurveys.git'
 default_run_options[:pty] = true
 
 set :user, 'ruby'
-set :use_sudo, false
+set :use_sudo, 'false'
 set :scm, :git
-set :scm_passphrase, "unf0ld"
+set :scm_passphrase, ""
 set :stages, %w(production staging preprod)
 
 # Default value for :format is :pretty
