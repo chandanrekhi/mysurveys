@@ -1,6 +1,7 @@
 
+require 'bundler/capistrano'
 require 'capistrano/ext/multistage'
-require 'bundler'
+
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
@@ -62,4 +63,25 @@ namespace :deploy do
     end
   end
 
+desc 'Start the Thin process'
+  task :start, :roles => :app do
+    run "cd #{current_path}; bundle exec thin start -C #{thin_config}"
+  end
+  
+  desc 'Stop the Thin process'
+  task :stop, :roles => :app do
+    run "cd #{current_path}; bundle exec thin stop -C #{thin_config}"
+  end
+  
+  desc 'Restart the Thin process'
+  task :restart, :roles => :app do
+    run "cd #{current_path}; bundle exec thin stop -C #{thin_config}"
+    run "cd #{current_path}; bundle exec thin start -C #{thin_config}"
+    run "#{sudo} monit restart apache"
+  end
 end
+
+after 'db:recreate', 'deploy:restart'
+
+# deploy:restart dependencies
+after 'deploy:restart', 'deploy:cleanup'
