@@ -6,7 +6,7 @@ require 'capistrano/ext/multistage'
 #lock '3.2.1'
 
 set :application, 'Surveys'
-set :repo_url, 'git@github.com:chandanrekhi/mysurveys.git'
+set :repo_url, 'https://github.com/chandanrekhi/mysurveys.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
