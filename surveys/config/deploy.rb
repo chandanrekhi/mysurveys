@@ -16,9 +16,10 @@ set :repo_url, 'https://github.com/chandanrekhi/mysurveys.git'
 
 # Default value for :scm is :git
 set :user, 'ruby'
+set :use_sudo, 'false'
 set :scm, :git
 set :repository, "git@github.com:chandanrekhi/mysurveys.git"
-set :scm_passphrase, "unf0ld8"
+set :scm_passphrase, "unf0ld"
 set :stages, %w(production staging preprod)
 
 # Default value for :format is :pretty
