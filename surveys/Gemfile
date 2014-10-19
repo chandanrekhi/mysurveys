@@ -34,7 +34,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
- gem 'capistrano'
-gem 'capistrano-bundler'
+gem "capistrano", "~> 2.15.0"
+
 # To use debugger
 # gem 'debugger'
