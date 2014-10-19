@@ -145,6 +145,7 @@ DEPENDENCIES
   capistrano (~> 2.15.0)
   coffee-rails (~> 3.2.1)
   jquery-rails
+  net-ssh
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   sqlite3
