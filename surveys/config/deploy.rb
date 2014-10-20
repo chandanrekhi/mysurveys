@@ -13,7 +13,7 @@ set :repository, 'https://github.com/chandanrekhi/mysurveys.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
- set :deploy_to, '/var/www/mysurveys'
+ #set :deploy_to, '/var/www/mysurveys'
 
 # Default value for :scm is :git
 default_run_options[:pty] = true
