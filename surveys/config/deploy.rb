@@ -6,7 +6,7 @@ require 'capistrano/ext/multistage'
 #lock '3.2.1'
 
 set :application, 'Surveys'
-set :repository, 'ssh://git@github.com/chandanrekhi/mysurveys.git'
+set :repository, 'https://github.com/chandanrekhi/mysurveys.git'
 
 
 # Default branch is :master
