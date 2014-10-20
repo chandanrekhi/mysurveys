@@ -22,7 +22,7 @@ set :user, 'ruby'
 set :use_sudo, 'false'
 set :scm, :git
 set :deploy_via, :remote_cache
-set :scm_passphrase, "unf0ld8"
+set :scm_passphrase, "unf0ld"
 set :stages, %w(production staging preprod)
 
 # Default value for :format is :pretty
