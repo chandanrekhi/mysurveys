@@ -21,7 +21,7 @@ default_run_options[:pty] = true
 set :user, 'ruby'
 set :use_sudo, 'false'
 set :scm, :git
-#set :deploy_via, :remote_cache
+set :deploy_via, :export
 set :scm_passphrase, "unf0ld"
 set :stages, %w(production staging preprod)
 
